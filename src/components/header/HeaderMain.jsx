@@ -3,7 +3,7 @@ import '../../App.scss'
 function HeaderMain() {
 
     return (
-        <div className="HeaderMain header">
+        <div className="headerMain header">
             <div className="center-bg"></div>
             <div className="bottom-bg"></div>
             <div className="z-index-100">
