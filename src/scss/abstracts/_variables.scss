@@ -1,9 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: nintendo;
+  src: url("/src/assets/fonts/nintendo.ttf");
+}
 
 :root{
   /* Fonts */
   --font-opensans: 'Open Sans', sans-serif;
+  --font-nintendo: nintendo;
   /* Colors */
   --gray: #4E4C4B;
   --square-bg: url('/src/assets/backgrounds/pattern.svg');
+  --blue-primary: #4860F8;
+  --blue-secondary: #334BCE;
+  --blue-third: #212F97;
+  --red-primary: #E73030;
+  --pink: #EA7E80;
+  --gray-primary: #F8F9FB;
+  --gray-secondary: #C7CFD8;
+  --gray-third: #9BA7B3;
+  --gray-strong: #838584;
+  --orange: #FC5109;
+
 }

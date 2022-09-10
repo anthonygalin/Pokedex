@@ -1,0 +1,37 @@
+//Titles
+.title-main {
+  color: white;
+  font-size: 40px;
+  text-shadow: 3px 1px black;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+//Breack-points
+
+@media (min-height: 900px) {
+  .title-main {
+    font-size: 50px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .title-main {
+    font-size: 80px;
+    text-shadow: 5px 2px black;
+  }
+}
+
+@media (min-height: 1200px) {
+  .title-main {
+    font-size: 90px;
+    text-shadow: 5px 2px black;
+  }
+}
+
+@media (min-width: 600px) {
+  .title-main {
+    font-size: 80px;
+    text-shadow: 5px 2px black;
+  }
+}
