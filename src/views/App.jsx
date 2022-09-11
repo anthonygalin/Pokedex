@@ -45,11 +45,11 @@ function App() {
     }
     //Change pokemon to shyni version
     const onChangeSh = () => {
-        if(!active) {
+        if (!active) {
             setActive(active = true)
             return setChangeSh(changeSh = spriteSh);
         }
-        if(active) {
+        if (active) {
             setActive(active = null);
             setChangeSh(changeSh = sprite);
         }
