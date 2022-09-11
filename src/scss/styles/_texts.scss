@@ -15,6 +15,14 @@
 .pokemon-name:first-letter {
   text-transform: uppercase;
 }
+.info {
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  text-shadow: 2px 1px var(--gray-secondary);
+  z-index: 1;
+}
 
 //Breack-points
 
