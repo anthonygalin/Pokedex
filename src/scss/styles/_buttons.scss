@@ -1,3 +1,4 @@
+//class for the button shinny
 .shinny-btn {
   position: absolute;
   bottom: 0;
@@ -13,10 +14,17 @@
   width: 90%;
   height: 100%;
 }
+//used in the buttons in the footer.
 .action-btn {
+  min-height: 80%;
+  justify-self: stretch;
   position: relative;
   border: 4px solid black;
   border-radius: 12px;
-  min-width: 70px;
-  min-height: 40px;
+}
+//breakpoints
+@media (min-height: 800px) {
+  .action-btn {
+    min-height: 60%;
+  }
 }

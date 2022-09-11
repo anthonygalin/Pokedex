@@ -15,10 +15,10 @@ function PokeList({pokemons, select, pokeData}) {
                                     select(pokemon)
                                 }} key={index}
                                             className={`pokemon-name-container ${pokemon.name === pokeData.name ? 'active' : 'inactive'}`}>
-                            <span className="pokemon-name w-min-50 text-align-right">
+                            <span className="pokemon-name-list w-min-50 text-align-right">
                                 {newIndex}
                             </span>
-                                    <h1 className="pokemon-name">
+                                    <h1 className="pokemon-name-list">
                                         {pokemon.name}
                                     </h1>
                                 </div>
