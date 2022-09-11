@@ -1,7 +1,6 @@
 import '../../App.scss'
 
-function Pokemon() {
-
+function Pokemon(props) {
     return (
         <section className="pokemon-container">
         </section>

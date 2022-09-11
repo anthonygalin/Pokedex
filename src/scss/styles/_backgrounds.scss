@@ -1,0 +1,9 @@
+//backgrounds containers
+.poke-list-bg {
+  position: absolute;
+  background-color: var(--red-primary);
+  border-right: 6px solid var(--pink);
+  width: 15%;
+  height: 100%;
+  z-index: 1;
+}
