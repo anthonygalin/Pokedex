@@ -6,7 +6,9 @@
 }
 //Components container
 .pokemon-container {
-  border: 2px solid black;
+  position: relative;
+  display: grid;
+  place-items: center;
   height: 40vh;
   width: 80%;
   align-self: start;
