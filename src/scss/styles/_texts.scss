@@ -1,4 +1,5 @@
 //Titles
+//title in the header.
 .title-main {
   color: white;
   font-size: 40px;
@@ -6,6 +7,7 @@
   letter-spacing: 2px;
   font-weight: 500;
 }
+//used for text in the pokemon list, pokemon name in the title and button for more info.
 .pokemon-name {
   font-size: 40px;
   font-weight: 300;
@@ -15,9 +17,19 @@
 .pokemon-name:first-letter {
   text-transform: uppercase;
 }
+.pokemon-name-list {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--gray-strong);
+  text-shadow: 2px 1px var(--gray-secondary);
+}
+.pokemon-name-list:first-letter {
+  text-transform: uppercase;
+}
+//used for buttons in the footer
 .info {
   position: relative;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   color: black;
   text-shadow: 2px 1px var(--gray-secondary);
@@ -25,23 +37,36 @@
 }
 
 //Breack-points
-
-@media (min-height: 900px) {
+@media (min-height: 600px) {
+  .pokemon-name-list {
+    font-size: 38px;
+  }
+}
+@media (min-height: 800px) {
   .title-main {
     font-size: 50px;
   }
-}
-
-@media (min-height: 1000px) {
-  .title-main {
-    font-size: 80px;
-    text-shadow: 5px 2px black;
+  .pokemon-name {
+    font-size: 50px;
+  }
+  .pokemon-name-list {
+    font-size: 45px;
+  }
+  .info {
+    font-size: 25px;
   }
 }
-
-@media (min-height: 1200px) {
+@media (min-height: 1300px) {
   .title-main {
-    font-size: 90px;
-    text-shadow: 5px 2px black;
+    font-size: 80px;
+  }
+  .pokemon-name {
+    font-size: 80px;
+  }
+  .pokemon-name-list {
+    font-size: 60px;
+  }
+  .info {
+    font-size: 45px;
   }
 }

@@ -60,9 +60,11 @@ function App() {
         <section className="App">
             <HeaderMain/>
             <main className="container">
-                <Name pokeData={ pokeData }/>
-                <Pokemon changeSh={changeSh} onChangeSh={onChangeSh} active={active}/>
-                <InfoBtn/>
+                <section className="pokemon-card-container">
+                    <Name pokeData={ pokeData }/>
+                    <Pokemon changeSh={changeSh} onChangeSh={onChangeSh} active={active}/>
+                    <InfoBtn/>
+                </section>
                 <PokeList pokemons={pokemons} select={select} pokeData={pokeData}/>
                 <Footer/>
             </main>
