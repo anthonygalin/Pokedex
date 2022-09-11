@@ -28,3 +28,10 @@
     min-height: 60%;
   }
 }
+@media (min-width: 800px) {
+  .action-btn {
+    justify-self: center;
+    min-height: 70%;
+    width: 80%;
+  }
+}
