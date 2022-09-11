@@ -50,8 +50,10 @@
   gap: 10px;
 }
 .footer-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
   width: 80%;
-  border: 2px solid black;
   height: 8vh;
   margin-bottom: 10px;
 }
