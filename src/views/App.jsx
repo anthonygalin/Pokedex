@@ -1,12 +1,13 @@
 import '../App.scss'
 import {useState, useEffect} from "react";
 import HeaderMain from "../components/header/HeaderMain.jsx";
-import Pokemon from "../components/main/Pokemon.jsx";
+import Pokemon from "../components/main/pokemon/Pokemon.jsx";
 import InfoBtn from "../components/buttons/Info-btn.jsx";
 import PokeList from "../components/main/Poke-list.jsx";
 import Footer from "../components/footer/Footer.jsx";
 import {getPokemons} from "../utils/getPetitions.js";
 import axios from "axios";
+import Name from "../components/main/pokemon/Name.jsx";
 
 function App() {
     //States
@@ -59,6 +60,7 @@ function App() {
         <section className="App">
             <HeaderMain/>
             <main className="container">
+                <Name pokeData={ pokeData }/>
                 <Pokemon changeSh={changeSh} onChangeSh={onChangeSh} active={active}/>
                 <InfoBtn/>
                 <PokeList pokemons={pokemons} select={select} pokeData={pokeData}/>
