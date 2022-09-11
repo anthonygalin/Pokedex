@@ -47,7 +47,8 @@
   padding-top: 2px;
   padding-bottom: 2px;
   max-height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 0;
 }
 //container for each pokemon name on the list.
@@ -70,3 +71,36 @@
   margin-bottom: 10px;
 }
 //Breackpoints
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .pokemon-card-container {
+    place-self: stretch;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .poke-list-container{
+    margin-top: 10px;
+    place-self: stretch;
+    height: 80vh;
+    width: 95%;
+  }
+  .info-container.align-self-end {
+    align-self: center !important;
+  }
+  .pokemon-container {
+    height: 50vh;
+  }
+  .footer-container {
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
