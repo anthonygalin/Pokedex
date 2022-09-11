@@ -9,8 +9,13 @@ import {getPokemons} from "../utils/getPetitions.js";
 import axios from "axios";
 
 function App() {
+    //States
+    let [active, setActive] = useState(null);
+    let [changeSh, setChangeSh] = useState(null);
     let [pokemons, setPokemons] = useState([]);
     let [pokeData, setPokeData] = useState(null);
+    let [sprite, setSprite] = useState(null);
+    let [spriteSh, setSpriteSh] = useState(null);
 
 
     useEffect(() => {
@@ -23,6 +28,9 @@ function App() {
         if (!pokeData) {
             axios.get('https://pokeapi.co/api/v2/pokemon/1/').then((r) => {
                 setPokeData(pokeData = r.data);
+                setSprite(sprite = r.data.sprites.versions["generation-v"]["black-white"].animated.front_default);
+                setSpriteSh(spriteSh = r.data.sprites.versions["generation-v"]["black-white"].animated.front_shiny);
+                setChangeSh(changeSh = sprite)
             });
         }
     }, []);
@@ -30,14 +38,28 @@ function App() {
     const select = (pokemon) => {
         axios.get(pokemon.url).then((r) => {
             setPokeData(pokeData = r.data);
+            setSprite(sprite = r.data.sprites.versions["generation-v"]["black-white"].animated.front_default);
+            setSpriteSh(spriteSh = r.data.sprites.versions["generation-v"]["black-white"].animated.front_shiny);
+            setChangeSh(changeSh = sprite);
         })
+    }
+    //Change pokemon to shyni version
+    const onChangeSh = () => {
+        if(!active) {
+            setActive(active = true)
+            return setChangeSh(changeSh = spriteSh);
+        }
+        if(active) {
+            setActive(active = null);
+            setChangeSh(changeSh = sprite);
+        }
     }
 
     return (
         <section className="App">
             <HeaderMain/>
             <main className="container">
-                <Pokemon/>
+                <Pokemon changeSh={changeSh} onChangeSh={onChangeSh}/>
                 <InfoBtn/>
                 <PokeList pokemons={pokemons} select={select} pokeData={pokeData}/>
                 <Footer/>
