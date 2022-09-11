@@ -32,6 +32,7 @@ function App() {
                 setSprite(sprite = r.data.sprites.versions["generation-v"]["black-white"].animated.front_default);
                 setSpriteSh(spriteSh = r.data.sprites.versions["generation-v"]["black-white"].animated.front_shiny);
                 setChangeSh(changeSh = sprite)
+                setActive(active = null)
             });
         }
     }, []);
@@ -42,6 +43,7 @@ function App() {
             setSprite(sprite = r.data.sprites.versions["generation-v"]["black-white"].animated.front_default);
             setSpriteSh(spriteSh = r.data.sprites.versions["generation-v"]["black-white"].animated.front_shiny);
             setChangeSh(changeSh = sprite);
+            setActive(active = null)
         })
     }
     //Change pokemon to shyni version

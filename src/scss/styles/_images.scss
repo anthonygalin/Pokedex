@@ -1,7 +1,16 @@
 .pokemon {
+  cursor: pointer;
   position: absolute;
   min-width: 50%;
   max-height: 80%;
+}
+.pokemon:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+.pokemon:active {
+  transform: scale(1.2);
+  transition-duration: 0.1s;
 }
 @media (min-width: 800px) {
   .pokemon {
