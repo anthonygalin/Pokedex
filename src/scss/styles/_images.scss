@@ -4,10 +4,6 @@
   min-width: 50%;
   max-height: 80%;
 }
-.pokemon:hover {
-  transform: scale(1.1);
-  transition-duration: 0.5s;
-}
 .pokemon:active {
   transform: scale(1.2);
   transition-duration: 0.1s;
@@ -16,6 +12,14 @@
   .pokemon {
     min-width: 80%;
     max-height: 100%;
+  }
+  .pokemon:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+  }
+  .pokemon:active {
+    transform: scale(1.2);
+    transition-duration: 0.1s;
   }
 }
 @media (min-width: 1200px) {
