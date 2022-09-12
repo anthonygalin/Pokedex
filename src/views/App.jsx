@@ -13,6 +13,7 @@ function App() {
     //States
     let [active, setActive] = useState(null);
     let [changeSh, setChangeSh] = useState(null);
+    let [loader, setLoader] = useState('display-block');
     let [pokemons, setPokemons] = useState([]);
     let [pokeData, setPokeData] = useState(null);
     let [sprite, setSprite] = useState(null);
@@ -31,19 +32,21 @@ function App() {
                 setPokeData(pokeData = r.data);
                 setSprite(sprite = r.data.sprites.versions["generation-v"]["black-white"].animated.front_default);
                 setSpriteSh(spriteSh = r.data.sprites.versions["generation-v"]["black-white"].animated.front_shiny);
-                setChangeSh(changeSh = sprite)
-                setActive(active = null)
+                setChangeSh(changeSh = sprite);
+                setActive(active = null);
             });
         }
     }, []);
     //Fetch with selected pokemon
     const select = (pokemon) => {
+        setLoader(loader = 'display-block');
+        setChangeSh(changeSh = null);
         axios.get(pokemon.url).then((r) => {
             setPokeData(pokeData = r.data);
             setSprite(sprite = r.data.sprites.versions["generation-v"]["black-white"].animated.front_default);
             setSpriteSh(spriteSh = r.data.sprites.versions["generation-v"]["black-white"].animated.front_shiny);
             setChangeSh(changeSh = sprite);
-            setActive(active = null)
+            setActive(active = null);
         })
     }
     //Change pokemon to shyni version
@@ -54,7 +57,7 @@ function App() {
         }
         if (active) {
             setActive(active = null);
-            setChangeSh(changeSh = sprite);
+            return setChangeSh(changeSh = sprite);
         }
     }
 
@@ -64,7 +67,7 @@ function App() {
             <main className="container">
                 <section className="pokemon-card-container">
                     <Name pokeData={ pokeData }/>
-                    <Pokemon changeSh={changeSh} onChangeSh={onChangeSh} active={active}/>
+                    <Pokemon changeSh={changeSh} onChangeSh={onChangeSh} active={active} loader={loader} setLoader={setLoader} setChangeSh={setChangeSh}/>
                     <InfoBtn/>
                 </section>
                 <PokeList pokemons={pokemons} select={select} pokeData={pokeData}/>
