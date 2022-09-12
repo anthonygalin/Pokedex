@@ -4,6 +4,7 @@
   place-items: center;
   height: 92.5vh;
 }
+
 //Components container
 //container principal for pokemon name, pokemon img, and pokemon more info.
 .pokemon-card-container {
@@ -12,6 +13,7 @@
   grid-template-columns: repeat(1, 1fr);
   width: 100%;
 }
+
 //container for the pokemon img and shinne button.
 .pokemon-container {
   position: relative;
@@ -22,6 +24,7 @@
   align-self: start;
   margin-top: 10px;
 }
+
 //container for the button and title.
 .info-container {
   display: grid;
@@ -34,10 +37,12 @@
   width: 80%;
   cursor: pointer;
 }
+
 .info-container:active {
   transform: scale(1.2);
   transition-duration: 0.1s;
 }
+
 //container for the list of pokemons.
 .poke-list-container {
   position: relative;
@@ -46,6 +51,7 @@
   border-radius: 6px;
   height: 30vh;
 }
+
 //container for the list names of the pokemons.
 .list-name-container {
   cursor: pointer;
@@ -57,6 +63,7 @@
   overflow-x: hidden;
   z-index: 0;
 }
+
 //container for each pokemon name on the list.
 .pokemon-name-container {
   width: 85%;
@@ -64,12 +71,14 @@
   padding: 3px 0 3px 5px;
   display: flex;
   flex-flow: row wrap;
-  gap: 10px;
+  justify-content: start;
 }
+
 .pokemon-name-container:active {
   transform: scale(1.4) translate(30px);
   transition-duration: 0.1s;
 }
+
 //container for buttons in the footer
 .footer-container {
   display: grid;
@@ -80,7 +89,14 @@
   height: 8vh;
   margin-bottom: 10px;
 }
+
 //Breackpoints
+@media (min-height: 800px) {
+  .pokemon-name-container {
+    gap: 6px;
+  }
+}
+
 @media (min-width: 800px) {
   .container {
     display: grid;
@@ -94,19 +110,19 @@
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
   }
-  .poke-list-container{
+  .poke-list-container {
     margin-top: 10px;
     place-self: stretch;
     height: 80vh;
     width: 95%;
   }
   .pokemon-name-container:hover {
-    transform: scale(1.3) translate(100px);
+    transform: scale(1.3) translate(50px);
     transition-duration: 0.5s;
   }
   .pokemon-name-container:active {
-    transform: scale(1.4) translate(150px);
-    transition-duration: 0.1s;
+    transform: scale(1.4) translate(80px);
+    transition-duration: 0.2s;
   }
   .info-container.align-self-end {
     align-self: center !important;
@@ -128,5 +144,38 @@
     margin-bottom: 10px;
     grid-column-start: 1;
     grid-column-end: 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pokemon-name-container:hover {
+    transform: scale(1.3) translate(60px);
+    transition-duration: 0.5s;
+  }
+
+  .pokemon-name-container:active {
+    transform: scale(1.4) translate(80px);
+    transition-duration: 0.2s;
+  }
+}
+
+@media (min-width: 1500px) {
+  .pokemon-name-container:hover {
+    transform: scale(1.3) translate(70px);
+    transition-duration: 0.5s;
+  }
+  .pokemon-name-container:active {
+    transform: scale(1.4) translate(90px);
+    transition-duration: 0.2s;
+  }
+}
+@media (min-width: 1700px) {
+  .pokemon-name-container:hover {
+    transform: scale(1.3) translate(90px);
+    transition-duration: 0.5s;
+  }
+  .pokemon-name-container:active {
+    transform: scale(1.4) translate(120px);
+    transition-duration: 0.2s;
   }
 }

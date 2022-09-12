@@ -17,3 +17,21 @@ button {
   background: none;
   font-family: var(--font-nintendo);
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 5px solid white;
+  background-color: var(--gray-secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border: 2px solid black;
+  background: var(--blue-primary);
+  border-radius: 3px;
+}

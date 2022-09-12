@@ -2,8 +2,6 @@ import '../../../App.scss'
 
 function Name({ pokeData }) {
 
-    console.log(pokeData)
-
     return (
         <section className="info-container align-self-end">
             {pokeData &&
