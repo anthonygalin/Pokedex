@@ -116,10 +116,6 @@
     height: 80vh;
     width: 95%;
   }
-  .pokemon-name-container:hover {
-    transform: scale(1.3) translate(50px);
-    transition-duration: 0.5s;
-  }
   .pokemon-name-container:active {
     transform: scale(1.4) translate(80px);
     transition-duration: 0.2s;
@@ -148,11 +144,6 @@
 }
 
 @media (min-width: 1200px) {
-  .pokemon-name-container:hover {
-    transform: scale(1.3) translate(60px);
-    transition-duration: 0.5s;
-  }
-
   .pokemon-name-container:active {
     transform: scale(1.4) translate(80px);
     transition-duration: 0.2s;
@@ -160,20 +151,12 @@
 }
 
 @media (min-width: 1500px) {
-  .pokemon-name-container:hover {
-    transform: scale(1.3) translate(70px);
-    transition-duration: 0.5s;
-  }
   .pokemon-name-container:active {
     transform: scale(1.4) translate(90px);
     transition-duration: 0.2s;
   }
 }
 @media (min-width: 1700px) {
-  .pokemon-name-container:hover {
-    transform: scale(1.3) translate(90px);
-    transition-duration: 0.5s;
-  }
   .pokemon-name-container:active {
     transform: scale(1.4) translate(120px);
     transition-duration: 0.2s;
