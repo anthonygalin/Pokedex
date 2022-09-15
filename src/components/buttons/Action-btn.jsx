@@ -1,9 +1,10 @@
 import '../../App.scss'
 
-function ActionBtn({name}) {
+function ActionBtn({name, onShowModal}) {
+
 
     return (
-        <button className="action-btn">
+        <button onClick={onShowModal} className="action-btn">
             <div className="action-btn-bg-top"/>
             <div className="action-btn-bg-bottom"/>
             <p className="info">{name}</p>

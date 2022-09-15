@@ -8,9 +8,11 @@ import Footer from "../components/footer/Footer.jsx";
 import {getPokemons} from "../utils/getPetitions.js";
 import axios from "axios";
 import Name from "../components/main/pokemon/Name.jsx";
+import SearchDialog from "../components/dialogs/Search-dialog.jsx";
 
 function App() {
     //States
+    let [showModal, setShowModal] = useState(false);
     let [active, setActive] = useState(null);
     let [changeSh, setChangeSh] = useState(null);
     let [loader, setLoader] = useState('display-block');
@@ -60,6 +62,11 @@ function App() {
             return setChangeSh(changeSh = sprite);
         }
     }
+    const onShowModal = () => {
+        console.log('1', showModal)
+        showModal === false ? setShowModal(showModal = true) : setShowModal(showModal = false);
+        console.log('2', showModal)
+    }
 
     return (
         <section className="App">
@@ -71,7 +78,9 @@ function App() {
                     <InfoBtn/>
                 </section>
                 <PokeList pokemons={pokemons} select={select} pokeData={pokeData}/>
-                <Footer/>
+                <Footer onShowModal={onShowModal}/>
+                {/*Dialogs and Modals.*/}
+                <SearchDialog showModal={showModal}/>
             </main>
         </section>
     )
