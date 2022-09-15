@@ -1,5 +1,6 @@
 //Main container
 .container {
+  position: relative;
   display: grid;
   place-items: center;
   height: 92.5vh;
@@ -88,6 +89,14 @@
   width: 80%;
   height: 8vh;
   margin-bottom: 10px;
+}
+.search-icon-container {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pink);
 }
 
 //Breackpoints

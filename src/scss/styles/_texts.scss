@@ -14,8 +14,19 @@
   color: var(--gray-strong);
   text-shadow: 2px 1px var(--gray-secondary);
 }
-.pokemon-name:first-letter {
-  text-transform: uppercase;
+.input-text {
+  padding: 4px;
+  width: 100%;
+  font-size: 35px;
+  font-weight: 300;
+  color: var(--gray-strong);
+  text-shadow: 2px 1px var(--gray-secondary);
+}
+.pokemon-name.input {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--gray-strong);
+  text-shadow: 2px 1px var(--gray-secondary);
 }
 .pokemon-name-list {
   font-size: 30px;
@@ -70,12 +81,30 @@
     font-size: 45px;
   }
 }
+@media (min-width: 400px) {
+  .input-text {
+    padding: 4px;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--gray-strong);
+    text-shadow: 2px 1px var(--gray-secondary);
+  }
+}
 @media (min-width: 800px) {
   .pokemon-name-list {
     font-size: 50px;
   }
   .info {
     font-size: 30px;
+  }
+  .input-text {
+    padding: 4px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: 300;
+    color: var(--gray-strong);
+    text-shadow: 2px 1px var(--gray-secondary);
   }
 }
 @media (min-width: 1400px) {

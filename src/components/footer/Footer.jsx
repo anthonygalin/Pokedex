@@ -1,11 +1,11 @@
 import '../../App.scss'
 import ActionBtn from "../buttons/Action-btn.jsx";
 
-function Footer() {
+function Footer({onShowModal}) {
 
     return (
         <section className="footer-container">
-            <ActionBtn name="SEARCH"/>
+            <ActionBtn onShowModal={onShowModal}  name="SEARCH"/>
             <ActionBtn name="FILTER"/>
             <ActionBtn name="(GEN)"/>
             <ActionBtn name="HELP"/>
